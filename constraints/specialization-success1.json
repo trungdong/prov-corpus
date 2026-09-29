@@ -1,0 +1,15 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {},
+    "ex:e2": {}
+  },
+  "specializationOf": {
+    "_:id1": {
+      "prov:specificEntity": "ex:e2",
+      "prov:generalEntity": "ex:e1"
+    }
+  }
+}

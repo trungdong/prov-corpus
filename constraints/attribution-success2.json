@@ -1,0 +1,21 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {}
+  },
+  "agent": {
+    "ex:ag2": {}
+  },
+  "wasAttributedTo": {
+    "ex:del1": {
+      "prov:entity": "ex:e1",
+      "prov:agent": "ex:ag2"
+    },
+    "ex:del2": {
+      "prov:entity": "ex:e1",
+      "prov:agent": "ex:ag2"
+    }
+  }
+}

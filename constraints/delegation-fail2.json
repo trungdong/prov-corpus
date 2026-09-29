@@ -1,0 +1,26 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "activity": {
+    "ex:a2": {}
+  },
+  "agent": {
+    "ex:ag2": {},
+    "ex:ag1": {}
+  },
+  "actedOnBehalfOf": {
+    "ex:del1": [
+      {
+        "prov:delegate": "ex:ag2",
+        "prov:responsible": "ex:ag1",
+        "prov:activity": "ex:a2"
+      },
+      {
+        "prov:delegate": "ex:ag2-other",
+        "prov:responsible": "ex:ag1",
+        "prov:activity": "ex:a2"
+      }
+    ]
+  }
+}

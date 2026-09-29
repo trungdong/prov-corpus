@@ -1,0 +1,31 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {
+      "prov:type": {
+        "$": "prov:Plan",
+        "type": "xsd:QName"
+      }
+    }
+  },
+  "activity": {
+    "ex:a1": {}
+  },
+  "agent": {
+    "ex:ag1": {}
+  },
+  "wasAssociatedWith": {
+    "ex:assoc1": {
+      "prov:activity": "ex:a1",
+      "prov:agent": "ex:ag1",
+      "prov:plan": "ex:e1"
+    },
+    "ex:assoc2": {
+      "prov:activity": "ex:a1",
+      "prov:agent": "ex:ag1",
+      "prov:plan": "ex:e1"
+    }
+  }
+}

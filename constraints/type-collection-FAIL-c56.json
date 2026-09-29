@@ -1,0 +1,20 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {},
+    "ex:e2": {
+      "prov:type": {
+        "$": "prov:EmptyCollection",
+        "type": "xsd:QName"
+      }
+    }
+  },
+  "hadMember": {
+    "_:id1": {
+      "prov:collection": "ex:e2",
+      "prov:entity": "ex:e1"
+    }
+  }
+}

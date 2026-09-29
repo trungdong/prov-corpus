@@ -1,0 +1,17 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "wasInfluencedBy": {
+    "_:id1": [
+      {
+        "prov:influencee": "ex:x1",
+        "prov:influencer": "ex:x2"
+      },
+      {
+        "prov:influencee": "ex:x1",
+        "prov:influencer": "ex:x2"
+      }
+    ]
+  }
+}

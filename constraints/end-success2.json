@@ -1,0 +1,23 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {}
+  },
+  "activity": {
+    "ex:a1": {},
+    "ex:a2": {}
+  },
+  "wasEndedBy": {
+    "ex:end1": {
+      "prov:activity": "ex:a1",
+      "prov:trigger": "ex:e1",
+      "prov:ender": "ex:a2"
+    },
+    "_:id1": {
+      "prov:activity": "ex:a1",
+      "prov:ender": "ex:a2"
+    }
+  }
+}

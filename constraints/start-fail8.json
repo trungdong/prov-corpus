@@ -1,0 +1,31 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {}
+  },
+  "activity": {
+    "ex:a1": {},
+    "ex:a2": {}
+  },
+  "wasStartedBy": {
+    "ex:start1": [
+      {
+        "prov:time": "2013-11-16T16:05:00",
+        "prov:activity": "ex:a1",
+        "prov:starter": "ex:a2"
+      },
+      {
+        "prov:time": "2011-11-16T16:05:00",
+        "prov:activity": "ex:a1"
+      }
+    ],
+    "_:id1": {
+      "prov:time": "2012-11-16T16:05:00",
+      "prov:activity": "ex:a1",
+      "prov:trigger": "ex:e1",
+      "prov:starter": "ex:a2"
+    }
+  }
+}

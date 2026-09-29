@@ -1,0 +1,14 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "activity": {
+    "ex:a1": {},
+    "ex:a2": {}
+  },
+  "wasInformedBy": {
+    "ex:inf1": {
+      "prov:informed": "ex:a1"
+    }
+  }
+}
