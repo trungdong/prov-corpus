@@ -1,5 +1,6 @@
 document
   default <http://example.org/>
+  prefix cc <http://example.org/cc/>
   prefix ex <http://example.org/ex/>
   wasAttributedTo(ex:attr; e, ag, [ex:license='cc:attributionURL' ])
     

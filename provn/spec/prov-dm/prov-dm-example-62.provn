@@ -1,5 +1,6 @@
 document
   default <http://example.org/>
+  prefix ex <http://example.org/ex/>
    
     entity(e, [prov:type='ex:Car' ])
 endDocument

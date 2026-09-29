@@ -1,6 +1,7 @@
 document
   default <http://example.org/>
   prefix ex <http://example.org/ex/>
+  prefix rec54 <http://example.org/rec54/>
   prefix tr <http://example.org/tr/>
   agent(ex:Paolo, [ prov:type='prov:Person' ])
   agent(ex:Simon, [ prov:type='prov:Person' ])

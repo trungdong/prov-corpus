@@ -81,7 +81,7 @@ ProvPy cannot read three ProvToolbox PROV-XML files: `bundle-fail1.xml`, `bundle
 
 ## Regenerating
 
-`tools/extract_spec_examples.py` extracts the PROV-N and PROV-DM examples from the Recommendations. It writes to `tools/spec/`, so move the output to `provn/spec/`.
+`tools/extract_spec_examples.py` extracts the PROV-N and PROV-DM examples from the Recommendations. It writes to `tools/spec/`, so move the output to `provn/spec/`. It exits with an error if a wrapped fragment uses a prefix it does not declare.
 
 `tools/convert_constraints.py` converts the PROV-XML cases to PROV-JSON. It expects the PROV-XML sources under `src/prov/tests/unification/constraints`, taken from the ProvPy 3.2.1 archive:
 
@@ -97,6 +97,15 @@ Tags follow `vMAJOR.MINOR.PATCH`.
 - MAJOR: a file is removed or changed.
 - MINOR: files are added.
 - PATCH: README changes.
+
+### v2.0.0
+
+v2.0.0 regenerates eight files in `provn/spec/` in place, under the MAJOR rule. The v1.0.0 wrapper did not declare a prefix used only inside a qualified-name literal such as `'cc:attributionURL'` ([issue #1](https://github.com/trungdong/prov-corpus/issues/1)). Each file gains one `prefix` line.
+
+- `prov-n-example-34.provn`, `prov-n-example-35.provn` - prefix `cc`
+- `prov-dm-example-27.provn`, `prov-dm-example-31.provn` - prefix `rec54`
+- `prov-dm-example-61.provn`, `prov-dm-example-62.provn` - prefix `ex`
+- `prov-n-example-54.provn`, `prov-dm-example-59.provn` - prefix `ex`; still excluded, changed only so the script reproduces the corpus
 
 ## Licences
 

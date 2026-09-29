@@ -1,5 +1,6 @@
 document
   default <http://example.org/>
+  prefix ex <http://example.org/ex/>
     "ex:value" %% prov:QUALIFIED_NAME
     'ex:value'
 endDocument

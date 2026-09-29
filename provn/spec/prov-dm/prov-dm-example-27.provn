@@ -1,5 +1,6 @@
 document
   default <http://example.org/>
+  prefix rec54 <http://example.org/rec54/>
   prefix tr <http://example.org/tr/>
   entity(tr:WD-prov-dm-20111215, [ prov:type='rec54:WD'  ])
   entity(tr:WD-prov-dm-20111018, [ prov:type='rec54:WD'  ])
