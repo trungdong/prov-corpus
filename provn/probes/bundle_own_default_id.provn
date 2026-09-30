@@ -1,0 +1,7 @@
+document
+default <http://d.example/>
+bundle b
+default <http://bd/>
+entity(e)
+endBundle
+endDocument

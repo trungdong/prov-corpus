@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+wasGeneratedBy(ex:e, -, -, [prov:activity='ex:a'])
+endDocument

@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+entity(ex:e, [ex:k="2012-13-01T00:00:00" %% xsd:dateTime])
+endDocument

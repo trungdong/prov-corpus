@@ -1,0 +1,205 @@
+name	strict	default	rule	provpy
+activity_markers	accept	accept	[7]	
+activity_one_time	reject	reject	[7]	
+after_end	reject	reject	[1]	
+alt_with_attrs	reject	accept	[24]	519
+association_1	accept	accept	[20]	
+at_after_integer	reject	reject	[40]	
+at_attr_value_qname	reject	accept	[45]	519
+at_bare_name	accept	accept	[53] PN_LOCAL, [54] PN_CHARS_OTHERS	
+at_prefixed_local	accept	accept	[53] PN_LOCAL, [54] PN_CHARS_OTHERS	
+attrs_trailing_comma	reject	reject	[5]	
+bare_escaped_colon	accept	accept	[55] PN_CHARS_ESC	
+bare_name_value	reject	reject	[40]	
+bare_no_default	reject	reject	3.7.4	
+blank_node	reject	reject	[52] QUALIFIED_NAME	
+block_comment	accept	accept	2.6	
+bom	accept	accept	6	
+bundle_basic	accept	accept	[23]	
+bundle_dup_id	reject	reject	[23] decision	
+bundle_inherits_default	accept	accept	3.7.4	
+bundle_marker_id	reject	reject	[23], [38]	
+bundle_nested	reject	reject	[23]	
+bundle_own_default_id	accept	accept	3.7.4	
+bundle_own_prefix_id	accept	accept	3.7.4	
+bundle_prov_redeclared	reject	reject	3.7.4	
+bundle_shadow_prefix_id	accept	accept	3.7.4	
+bundle_then_record	reject	accept	[1]	519
+bundle_unterminated	reject	reject	[23]	
+combining_start	reject	reject	[53] PN_CHARS_U	
+comment_empty_block	accept	accept	2.6	
+comment_slash_star_slash	reject	reject	2.6	
+cr_only_lines	accept	accept	SPARQL 1.0 WS	
+crlf_line_comment	accept	accept	2.6	
+crlf_long_string	accept	accept	[58] STRING_LITERAL	
+datetime_value	reject	reject	[40]	
+decl_after_statement	reject	reject	[1]	
+default_after_prefix	reject	accept	[45]	519
+delegation_2	accept	accept	[21]	
+derivation_3	reject	reject	[17]	
+derivation_5	accept	accept	[17]	
+dictionary_stmt	reject	reject	[2], 5	
+digit_attr_name	reject	accept	[45]	519
+digit_bundle_id	accept	accept	[23], [53]	
+digit_datatype	reject	accept	[45]	519
+digit_datatype_default_first	accept	accept	[42], [53]	
+digit_id	accept	accept	[53] PN_LOCAL	
+digit_id_leading_zero	accept	accept	[53] PN_LOCAL	
+digit_prefix	reject	reject	[46] PN_PREFIX	
+dt_basic	accept	accept	DATETIME	
+dt_feb_30	reject	reject	DATETIME	
+dt_fraction_12_digits	accept	accept	DATETIME	
+dt_fraction_offset	accept	accept	DATETIME	
+dt_hour_24	accept	accept	DATETIME	
+dt_in_name_position	reject	reject	[12]	
+dt_month_13	reject	reject	DATETIME	
+dt_negative_year	accept	accept	DATETIME	514
+dt_offset_14h	accept	accept	DATETIME	
+dt_offset_15h	reject	reject	DATETIME	513
+dt_second_60	reject	reject	DATETIME	
+dt_year_0000	accept	accept	DATETIME	514
+dt_year_10000	accept	accept	DATETIME	514
+dup_attr_pairs	accept	accept	[5]	
+dup_prefix	reject	reject	3.7.4	
+dup_prefix_same_iri	reject	reject	3.7.4	
+element_marker_id	reject	reject	[3]	
+element_trailing_comma	reject	reject	[3]	
+empty_attrs	accept	accept	[5]	
+empty_document	accept	accept	[1]	
+empty_input	reject	reject	[1]	
+empty_iri_default	accept	accept	[47] IRI_REF	512
+empty_iri_prefix	accept	accept	[48] IRI_REF	512
+empty_local	accept	accept	[52]	
+esc_at	reject	reject	[55] PN_CHARS_ESC	
+esc_hash	reject	reject	[55] PN_CHARS_ESC	
+esc_invalid_q	reject	reject	[55] PN_CHARS_ESC	
+esc_percent	reject	reject	[55] PN_CHARS_ESC	
+esc_slash	reject	reject	[55] PN_CHARS_ESC	
+esc_spec_set	accept	accept	[55] PN_CHARS_ESC	
+esc_tilde	reject	reject	[55] PN_CHARS_ESC	
+esc_underscore	reject	reject	[55] PN_CHARS_ESC	
+extensibility	accept	accept	[49]	520
+extensibility_after_bundle	reject	accept	[1]	520
+extensibility_argument_after_attributes	reject	reject	[49]	
+extensibility_attributes	accept	accept	[49] to [51]	520
+extensibility_bare_nested_name	reject	reject	5	
+extensibility_empty_tuple	reject	reject	[51]	
+extensibility_expressions_64	accept	accept	[49] to [51]	520
+extensibility_expressions_65	reject	reject	[51] decision	
+extensibility_in_bundle	accept	accept	[49] to [51]	520
+extensibility_marker_identifier	accept	accept	[49] to [51]	520
+extensibility_nested_form	accept	accept	[49] to [51]	520
+extensibility_no_arguments	reject	reject	[49]	
+extensibility_set_form	accept	accept	[49] to [51]	520
+extensibility_trailing_comma	reject	reject	[49]	
+extensibility_tuples_64	accept	accept	[49] to [51]	520
+extensibility_tuples_65	reject	reject	[51] decision	
+extensibility_unclosed	reject	reject	[49]	
+extensibility_undeclared_argument_prefix	accept	accept	[49] to [51]	520
+formal_named_attr	reject	reject	3.1.3 decision	
+formal_named_attr_absent_formal	reject	reject	3.1.3 decision	523
+formal_named_attr_same	reject	reject	3.1.3 decision	523
+formfeed_whitespace	reject	reject	SPARQL 1.0 WS	509
+gen_arity_1	accept	accept	[9]	
+gen_arity_2	reject	reject	[9]	
+gen_datetime_id	reject	reject	[10], [11]	
+gen_marker_first	reject	accept	[9], [27]	
+gen_marker_id	accept	accept	[10], [11]	
+gen_with_id	accept	accept	[9]	
+inner_dot	accept	accept	[53] PN_LOCAL	
+int_below_i32	accept	accept	[60] INT_LITERAL	
+int_beyond_i32	accept	accept	[60] INT_LITERAL	
+int_huge	accept	accept	[60] INT_LITERAL	
+int_leading_zero	accept	accept	[60] INT_LITERAL	
+int_literal	accept	accept	[60] INT_LITERAL	
+int_negative	accept	accept	[60] INT_LITERAL	
+iri_u_escape	accept	accept	6, IRI_REF	521
+iri_u_escape_forbidden	reject	reject	6, IRI_REF	
+iri_with_nbsp	accept	accept	IRI_REF	
+iri_with_space	reject	reject	IRI_REF	
+keyword_as_id	accept	accept	[38]	
+keyword_bundle_id	accept	accept	[23], [38]	
+lang_and_type	reject	reject	[41], [43]	
+langtag	accept	accept	[43] LANGTAG	
+langtag_digits	reject	reject	[43] LANGTAG	
+langtag_long_subtag	accept	accept	[43] LANGTAG	
+langtag_space_before	accept	accept	[43] LANGTAG	
+langtag_trailing_dash	reject	reject	[43] LANGTAG	
+line_comment_eof	accept	accept	2.6	
+long_string	accept	accept	[58] STRING_LITERAL	
+long_string_four_quotes	reject	reject	[58] STRING_LITERAL	
+member_with_attrs	reject	accept	[26]	519
+member_with_id	reject	accept	[26]	519
+mention_bare	reject	accept	[2], 5	
+mention_marker	reject	accept	[2], 5	
+mention_prov	accept	accept	[49]	
+missing_end	reject	reject	[1]	
+missing_rparen	reject	reject	[3]	
+name_in_time_position	reject	reject	[12]	
+nbsp_whitespace	reject	reject	SPARQL 1.0 WS	509
+neg_digit_id	reject	reject	[53] PN_LOCAL	
+nel_whitespace	reject	reject	SPARQL 1.0 WS	509
+no_document_keyword	reject	reject	[1]	
+nul_char	reject	reject	SPARQL 1.0 WS	
+ogham_space_in_name	accept	accept	[53] PN_CHARS_BASE	
+percent_bad	reject	reject	[56] PERCENT	
+percent_hex	accept	accept	[56] PERCENT	
+prefix_named_default	accept	accept	[46] PN_PREFIX	
+prefix_named_prefix	accept	accept	[46] PN_PREFIX	
+prefix_trailing_dot	reject	reject	[46] PN_PREFIX	
+prefix_underscore	reject	reject	[46] PN_PREFIX	511
+prefix_with_dot	accept	accept	[46] PN_PREFIX	
+prefix_with_slash	reject	reject	[46] PN_PREFIX	511
+prov_redeclared_other	reject	reject	3.7.4	
+prov_redeclared_same	reject	accept	3.7.4	519
+prov_time_attr_on_entity	accept	accept	[6]	515
+qname_literal	accept	accept	[61] QUALIFIED_NAME_LITERAL	
+qname_literal_empty	reject	reject	[61] QUALIFIED_NAME_LITERAL	
+qname_literal_unresolvable	reject	reject	[61], 3.7.4	516
+qname_literal_unterminated	reject	reject	[61] QUALIFIED_NAME_LITERAL	
+same_record_twice	accept	accept	[2]	
+second_default	reject	reject	[45]	508
+spec_with_id	reject	accept	[25]	519
+start_3	reject	reject	[14]	
+start_4	accept	accept	[14]	
+string_bad_escape	reject	reject	[58] STRING_LITERAL	
+string_escapes	accept	accept	[58] STRING_LITERAL	
+string_raw_newline	reject	reject	[58] STRING_LITERAL	
+string_u_escape	accept	accept	6	521
+string_u_escape_lowercase	reject	reject	6	
+string_u_escape_out_of_range	reject	reject	6	
+string_u_escape_short	reject	reject	6	
+string_u_escape_surrogate	reject	reject	6	
+string_unicode_escape	accept	accept	6	521
+string_upper_u_escape	accept	accept	6	521
+trailing_dot	reject	reject	[53] PN_LOCAL	
+two_attr_blocks	reject	reject	[4]	
+typed_anyuri	accept	accept	[41]	
+typed_bool_bad	accept	accept	[41]	
+typed_bool_one	accept	accept	[41]	
+typed_custom	accept	accept	[41]	
+typed_datetime_bad_month	accept	accept	[41]	
+typed_datetime_date_only	accept	accept	[41]	
+typed_datetime_ok	accept	accept	[41]	
+typed_datetime_space	accept	accept	[41]	
+typed_double_bad	accept	accept	[41]	522
+typed_int_bad	accept	accept	[41]	522
+typed_int_spaces	accept	accept	[41]	
+typed_prov_qname	accept	accept	[41]	
+typed_prov_qname_not_a_name	reject	reject	3.7.3 decision	516
+typed_prov_qname_space_in_local	reject	reject	3.7.3 decision	524
+typed_prov_qname_unresolvable	reject	reject	3.7.4	516
+typed_string	accept	accept	[41]	
+typed_undeclared	reject	reject	3.7.4	
+typed_xsd_qname	accept	accept	[41]	
+u2028_whitespace	reject	reject	SPARQL 1.0 WS	509
+undeclared_prefix	reject	reject	3.7.4	
+unicode_name	accept	accept	[53] PN_CHARS	
+unknown_keyword	reject	reject	[2], 5	
+unterminated_comment	reject	reject	2.6	
+vtab_whitespace	reject	reject	SPARQL 1.0 WS	509
+xsd_redeclared_no_hash	reject	reject	3.7.4	
+xsd_redeclared_same	reject	accept	3.7.4	519
+xsi_declared_standard	accept	accept	[46]	510
+xsi_redeclared_other	accept	accept	[46]	510
+xsi_undeclared_use	reject	reject	3.7.4	510

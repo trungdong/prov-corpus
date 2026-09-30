@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+ex:f(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:g(ex:e))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+endDocument

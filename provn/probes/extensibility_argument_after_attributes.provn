@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+ex:foo(ex:e, [ex:k=1], ex:f)
+endDocument

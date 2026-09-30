@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+entity(ex:e, [ex:k=-2147483649])
+endDocument

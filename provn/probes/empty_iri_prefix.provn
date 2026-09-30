@@ -1,0 +1,4 @@
+document
+prefix z <>
+entity(z:e)
+endDocument

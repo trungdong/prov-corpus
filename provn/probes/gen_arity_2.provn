@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+wasGeneratedBy(ex:e, ex:a)
+endDocument

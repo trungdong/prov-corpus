@@ -1,6 +1,6 @@
 # PROV-N conformance corpus
 
-Fixtures for `test_provn_corpus.py`. Three sets:
+Fixtures for `test_provn_corpus.py`. Five sets:
 
 | Directory | Source | Licence | Profile |
 |---|---|---|---|
@@ -8,6 +8,7 @@ Fixtures for `test_provn_corpus.py`. Three sets:
 | `spec/prov-dm/` | Examples in the [PROV-DM Recommendation](https://www.w3.org/TR/2013/REC-prov-dm-20130430/), same treatment | W3C Document Licence | strict |
 | `provtoolbox/` | `modules-core/prov-n/src/test/resources/prov/*.provn` from [ProvToolbox](https://github.com/lucmoreau/ProvToolbox) | MIT | default |
 | `provtoolbox-corpus/` | PROV-N that ProvToolbox's writer produced from the shared test corpus (`modules-legacy/prov-n` test output); each file has a PROV-JSON fixture of the same name in `../json/` | MIT | default |
+| `probes/` | 204 short texts written for this corpus by `tools/gen_probes.py`, with the result each profile must give in `probes/expected.tsv`; see `probes/README.md` | MIT | strict and default, per probe |
 
 ## Specification examples that do not parse
 
@@ -20,6 +21,8 @@ rejects even though the Recommendation's prose presents it as valid. Listed in
   own text
 - `prov-n-example-37.provn` - `wasAssociatedWith(ex:a1, ex:ag1)` gives the agent without the
   paired plan; production [20] requires them together
+- `prov-n-example-51.provn` - a `default` declaration follows a `prefix` declaration; production
+  [45] puts the `default` before every `prefix`
 - `prov-n-example-52.provn`, `prov-n-example-53.provn` - a bare typed-literal pair, not a
   statement
 - `prov-n-example-54.provn` - a bare qualified-name literal pair, not a statement
@@ -29,11 +32,6 @@ rejects even though the Recommendation's prose presents it as valid. Listed in
   PROV-N
 - `prov-n-example-61.provn` - the bundle identifier `b` has no declared default namespace; the
   example illustrates qualified-name resolution for `ex:e001`, not the bundle name itself
-- `prov-n-example-63.provn` - the dictionary set-of-pairs literal
-  (`{("k1",e1), ...}`) is PROV-Dictionary syntax the lexer has no punctuation for,
-  unsupported by design
-- `prov-n-example-64.provn` - `dictExt:hadMembers(...)` is an extensibility expression
-  (`prefix:name(...)`), unsupported by design
 - `prov-dm-example-03.provn`, `prov-dm-example-04.provn` - `used`/`wasGeneratedBy` give only the
   entity/activity without the paired time; the formal grammar requires them together
 - `prov-dm-example-05.provn`, `prov-dm-example-06.provn` - a literal ellipsis elides the
@@ -45,6 +43,8 @@ rejects even though the Recommendation's prose presents it as valid. Listed in
   activity/entity without the paired plan or time
 - `prov-dm-example-34.provn`, `prov-dm-example-52.provn` - `wasAssociatedWith` gives only the
   activity and agent without the paired plan
+- `prov-dm-example-42.provn` - a statement follows an `endBundle` at document level; production
+  [1] puts every expression before the bundles
 - `prov-dm-example-53.provn`, `prov-dm-example-56.provn`, `prov-dm-example-63.provn` - `used`
   gives only the activity and entity without the paired time
 - `prov-dm-example-55.provn` - `used`/`wasGeneratedBy` give only the activity/entity without
@@ -59,11 +59,10 @@ Listed in `EXCLUDED_PROVTOOLBOX_DOCUMENTS`.
 
 - `container0.provn` - several entity identifiers are bare local names (`\\--`, `\\-`, `\\.`)
   with no default namespace declared anywhere in the document
-- `container1.provn`, `prov-family.provn`, `prov-family-graphics.provn` -
-  `derivedByInsertionFrom`'s dictionary set-of-pairs literal (`{(...)}`) is
-  PROV-Dictionary syntax the lexer has no punctuation for, unsupported by design
+- `container1.provn` - `"hello2"@EN %% xsd:string` gives one string both a language tag and a
+  datatype; productions [41] and [43] allow one or the other
 - `container2.provn` - `%% <http://example.org/type>` uses a bare IRI as a datatype; production
-  [53] requires `datatype` to be a `qualifiedName`
+  [42] requires `datatype` to be a `qualifiedName`
 
 ## JSON fixtures with no ProvToolbox counterpart
 

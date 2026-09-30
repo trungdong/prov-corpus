@@ -1,0 +1,4 @@
+document
+prefix prefix <http://u/>
+entity(prefix:e)
+endDocument

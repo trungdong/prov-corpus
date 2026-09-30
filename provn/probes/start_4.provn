@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+wasStartedBy(ex:a, ex:e, ex:a0, 2012-01-01T00:00:00)
+endDocument

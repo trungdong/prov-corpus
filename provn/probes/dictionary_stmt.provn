@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+hadDictionaryMember(ex:d, ex:e, "k")
+endDocument

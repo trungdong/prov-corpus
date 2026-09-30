@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+entity(ex:e, [ex:k="a\tb\n\"q\" \'s\' \\"])
+endDocument

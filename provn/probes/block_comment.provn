@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+/* c */ entity(ex:e) // x
+endDocument

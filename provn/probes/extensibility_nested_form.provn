@@ -1,0 +1,5 @@
+document
+prefix ex <http://example.org/>
+prefix dictExt <http://example.org/dictionaries#>
+dictExt:hadMembers(mid; d, dictExt:set(dictExt:pair("k1",e1), dictExt:pair("k2",e2)), [dictExt:uniqueKeys="true"])
+endDocument

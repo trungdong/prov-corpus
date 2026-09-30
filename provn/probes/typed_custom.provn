@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+entity(ex:e, [ex:k="x" %% ex:thing])
+endDocument

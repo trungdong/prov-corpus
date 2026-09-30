@@ -1,0 +1,5 @@
+document
+prefix ex <http://example.org/>
+prefix prov <http://www.w3.org/ns/prov#>
+entity(ex:e)
+endDocument

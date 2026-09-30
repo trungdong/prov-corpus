@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+prov:mentionOf(ex:e2, ex:e1, ex:b)
+endDocument

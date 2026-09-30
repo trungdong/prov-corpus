@@ -1,0 +1,4 @@
+document
+prefix a.b <http://u/>
+entity(a.b:e)
+endDocument

@@ -1,0 +1,6 @@
+document
+prefix ex <http://example.org/>
+bundle ex:b
+ex:foo(ex:e)
+endBundle
+endDocument

@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+ex:foo(zz:a, 'zz:q', [zz:k="v" %% zz:t])
+endDocument

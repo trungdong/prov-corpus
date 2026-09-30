@@ -1,0 +1,5 @@
+document
+default <http://a/>
+default <http://b/>
+entity(e)
+endDocument

@@ -1,0 +1,5 @@
+document
+prefix ex <http://example.org/>
+prefix prov <http://other/>
+entity(ex:e)
+endDocument

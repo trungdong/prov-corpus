@@ -1,0 +1,4 @@
+document
+default <http://d.example/>
+entity(123)
+endDocument
