@@ -8,7 +8,7 @@ Fixtures for `test_provn_corpus.py`. Five sets:
 | `spec/prov-dm/` | Examples in the [PROV-DM Recommendation](https://www.w3.org/TR/2013/REC-prov-dm-20130430/), same treatment | W3C Document Licence | strict |
 | `provtoolbox/` | `modules-core/prov-n/src/test/resources/prov/*.provn` from [ProvToolbox](https://github.com/lucmoreau/ProvToolbox) | MIT | default |
 | `provtoolbox-corpus/` | PROV-N that ProvToolbox's writer produced from the shared test corpus (`modules-legacy/prov-n` test output); each file has a PROV-JSON fixture of the same name in `../json/` | MIT | default |
-| `probes/` | 204 short texts written for this corpus by `tools/gen_probes.py`, with the result each profile must give in `probes/expected.tsv`; see `probes/README.md` | MIT | strict and default, per probe |
+| `probes/` | 215 short texts written for this corpus by `tools/gen_probes.py`, with the result each profile must give in `probes/expected.tsv`; see `probes/README.md` | MIT | strict and default, per probe |
 
 ## Specification examples that do not parse
 

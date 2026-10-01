@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+activity(ex:a, 2011-11-16T24:00:00.0000000001, -)
+endDocument

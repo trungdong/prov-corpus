@@ -1,0 +1,4 @@
+document
+prefix ex <http://example.org/>
+ex:f(2011-99-99T99:99:99)
+endDocument

@@ -1,0 +1,5 @@
+document
+default <http://d.example/>
+prefix ex <http://example.org/>
+entity(ex:e, [ex:k='@foo'])
+endDocument

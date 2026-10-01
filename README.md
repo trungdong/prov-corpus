@@ -16,7 +16,7 @@ Two libraries consume it:
 | `provn/spec/prov-dm/` | 63 | Examples in the PROV-DM Recommendation, same treatment | W3C Document Licence | strict |
 | `provn/provtoolbox/` | 9 | `modules-core/prov-n/src/test/resources/prov/*.provn` in ProvToolbox | MIT | default |
 | `provn/provtoolbox-corpus/` | 388 | PROV-N written by ProvToolbox from the shared JSON corpus; each file has a same-named file in `json/` | MIT | default |
-| `provn/probes/` | 204 `.provn` and `expected.tsv` | Short PROV-N texts written for this corpus by `tools/gen_probes.py`, each with the result the grammar requires | MIT | strict and default, per probe |
+| `provn/probes/` | 215 `.provn` and `expected.tsv` | Short PROV-N texts written for this corpus by `tools/gen_probes.py`, each with the result the grammar requires | MIT | strict and default, per probe |
 | `jsonld/` | 2 | PROV-JSON-LD examples, via ProvPy | MIT | n/a |
 | `constraints/` | 171 `.json` | PROV-CONSTRAINTS unification cases (see below) | MIT and W3C test suite licence | n/a |
 
@@ -103,6 +103,10 @@ Tags follow `vMAJOR.MINOR.PATCH`.
 - MAJOR: a file is removed or changed.
 - MINOR: files are added.
 - PATCH: README changes.
+
+### v2.2.0
+
+v2.2.0 adds 11 probes to `provn/probes/`, under the MINOR rule, and corrects the README text and the `rule` column of `expected.tsv`. No probe text and no `strict` or `default` value changes. The new probes isolate escapes in a prefix, a `default` declaration before the `prefix` declarations, a `\b` and a `\f` escape, a language tag with a digit subtag, an IRI with a space in a `default` declaration, and dateTime values with a minute of 60 or a 24th hour with a fraction. Six rows cite section 3.7.1 instead of 3.7.4 for an undeclared prefix or a bare name with no default. Rows that the Recommendation does not decide now end in `decision`.
 
 ### v2.1.0
 
