@@ -104,6 +104,10 @@ Tags follow `vMAJOR.MINOR.PATCH`.
 - MINOR: files are added.
 - PATCH: README changes.
 
+### Unreleased
+
+The next tag adds `constraints/derivation-fail5.json` and `constraints/derivation-fail6.json`, under the MINOR rule, and changes the README and licence files. The two files give one identifier to two derivations without an activity, one of which names a generation or a usage, and are expected to fail unification. `LICENCES.md` takes the three-licence statement from `LICENSE.md` and adds the notice the W3C Document Licence requires for the spec examples. `LICENSE` holds the MIT text alone, so GitHub detects the repository licence as MIT.
+
 ### v2.2.0
 
 v2.2.0 adds 11 probes to `provn/probes/`, under the MINOR rule, and corrects the README text and the `rule` column of `expected.tsv`. No probe text and no `strict` or `default` value changes. The new probes isolate escapes in a prefix, a `default` declaration before the `prefix` declarations, a `\b` and a `\f` escape, a language tag with a digit subtag, an IRI with a space in a `default` declaration, and dateTime values with a minute of 60 or a 24th hour with a fraction. Six rows cite section 3.7.1 instead of 3.7.4 for an undeclared prefix or a bare name with no default. Rows that the Recommendation does not decide now end in `decision`.
