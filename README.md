@@ -18,11 +18,11 @@ Two libraries consume it:
 | `provn/provtoolbox-corpus/` | 388 | PROV-N written by ProvToolbox from the shared JSON corpus; each file has a same-named file in `json/` | MIT | default |
 | `provn/probes/` | 215 `.provn` and `expected.tsv` | Short PROV-N texts written for this corpus by `tools/gen_probes.py`, each with the result the grammar requires | MIT | strict and default, per probe |
 | `jsonld/` | 2 | PROV-JSON-LD examples, via ProvPy | MIT | n/a |
-| `constraints/` | 171 `.json` | PROV-CONSTRAINTS unification cases (see below) | MIT and W3C test suite licence | n/a |
+| `constraints/` | 173 `.json` | PROV-CONSTRAINTS unification cases (see below) | MIT and W3C test suite licence | n/a |
 
 `provn/README.md` describes the PROV-N sets in full, including the known differences between the PROV-N and JSON fixtures. `provn/probes/README.md` describes the probes and the columns of `expected.tsv`.
 
-The `constraints/` directory holds 157 files converted from PROV-XML by `tools/convert_constraints.py` (150 ProvToolbox `.xml` cases and 7 W3C `type-*.provx` cases) and 14 files that were already PROV-JSON in ProvPy. `constraints/README.md` is ProvPy's original README for the PROV-XML sources and its naming convention (`-successN`, `-failN`, `PASS`, `FAIL`).
+The `constraints/` directory holds 157 files converted from PROV-XML by `tools/convert_constraints.py` (150 ProvToolbox `.xml` cases and 7 W3C `type-*.provx` cases), 14 files that were already PROV-JSON in ProvPy, and 2 files written for this corpus. The two written files, `derivation-fail5.json` and `derivation-fail6.json`, give one identifier to two derivations that both lack an activity, where one names a generation or a usage and the other does not; PROV-CONSTRAINTS Table 3 makes the generation and usage of a derivation without an activity non-expandable, so the absent one is the constant none and does not unify with the named one. Both are expected to fail unification (`-fail` in ProvPy's naming convention). `constraints/README.md` is ProvPy's original README for the PROV-XML sources and its naming convention (`-successN`, `-failN`, `PASS`, `FAIL`).
 
 ## Stability rule
 

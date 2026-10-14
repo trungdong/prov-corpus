@@ -3,7 +3,9 @@
 > 3.2.1, and only the `.json` files are kept. The three `bundle-*.xml` files
 > were not converted (ProvPy [#254](https://github.com/trungdong/prov/issues/254)).
 > The counts, file names and paths in the ProvPy text below describe the
-> ProvPy source, not this directory.
+> ProvPy source, not this directory. `derivation-fail5.json` and
+> `derivation-fail6.json` were written for this corpus and have no PROV-XML
+> source.
 
 # PROV-CONSTRAINTS unification corpus
 
