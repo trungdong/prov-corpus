@@ -123,4 +123,4 @@ v2.0.0 regenerates eight files in `provn/spec/` in place, under the MAJOR rule. 
 
 ## Licences
 
-See `LICENSE.md`.
+See `LICENCES.md`. The spec examples in `provn/spec/` carry W3C material under the W3C Document Licence, and `LICENCES.md` gives the notice that licence requires.

@@ -10,6 +10,14 @@ Copyright (c) 2013 World Wide Web Consortium (MIT, ERCIM, Keio, Beihang). All Ri
 
 Terms: <https://www.w3.org/copyright/document-license/>
 
+This notice covers the files in `provn/spec/prov-n/`:
+
+> Copyright © 2012-2013 W3C® (MIT, ERCIM, Keio, Beihang). This software or document includes material copied from or derived from PROV-N: The Provenance Notation, W3C Recommendation 30 April 2013, <https://www.w3.org/TR/2013/REC-prov-n-20130430/>.
+
+This notice covers the files in `provn/spec/prov-dm/`:
+
+> Copyright © 2011-2013 W3C® (MIT, ERCIM, Keio, Beihang). This software or document includes material copied from or derived from PROV-DM: The PROV Data Model, W3C Recommendation 30 April 2013, <https://www.w3.org/TR/2013/REC-prov-dm-20130430/>.
+
 ## W3C test suite licence
 
 Applies to the `type-*` cases in `constraints/`, which come from the W3C Provenance Working Group test suite.
@@ -21,6 +29,8 @@ Terms: <https://www.w3.org/copyright/test-suites-licenses/>
 ## MIT Licence
 
 Applies to everything else, including the ProvToolbox-derived files in `provn/provtoolbox/`, `provn/provtoolbox-corpus/` and `constraints/`, and the files in `json/` and `jsonld/`.
+
+The file `LICENSE` holds the same MIT text and copyright lines.
 
 ProvPy:
 
