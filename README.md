@@ -1,11 +1,11 @@
 # prov-corpus
 
-A W3C PROV conformance corpus. It holds PROV-JSON, PROV-N, PROV-JSON-LD and PROV-CONSTRAINTS fixtures, taken from the test suite of [prov](https://github.com/trungdong/prov) (ProvPy) 3.2.1.
+A W3C PROV conformance corpus. It holds PROV-JSON, PROV-N, PROV-JSON-LD and PROV-CONSTRAINTS fixtures. Most come from the test suite of [prov](https://github.com/trungdong/prov) (ProvPy) 3.2.1. The probes in `provn/probes/` and two files in `constraints/` were written for this corpus.
 
-Two libraries consume it:
+It serves two libraries:
 
-- [prov](https://github.com/trungdong/prov), the Python library.
-- provkit, the Rust crate, which pulls this repository in as a git submodule.
+- provkit, the Rust crate, pulls this repository in as a git submodule and tests against it.
+- [prov](https://github.com/trungdong/prov), the Python library, tests against the fixtures in its own source tree and does not read this repository yet. [prov issue #685](https://github.com/trungdong/prov/issues/685) tracks adopting the probes.
 
 ## Layout
 
@@ -17,7 +17,7 @@ Two libraries consume it:
 | `provn/provtoolbox/` | 9 | `modules-core/prov-n/src/test/resources/prov/*.provn` in ProvToolbox | MIT | default |
 | `provn/provtoolbox-corpus/` | 388 | PROV-N written by ProvToolbox from the shared JSON corpus; each file has a same-named file in `json/` | MIT | default |
 | `provn/probes/` | 228 `.provn` and `expected.tsv` | Short PROV-N texts written for this corpus by `tools/gen_probes.py`, each with the result the grammar requires | MIT | strict and default, per probe |
-| `jsonld/` | 2 | PROV-JSON-LD examples, via ProvPy | MIT | n/a |
+| `jsonld/` | 2 | PROV-JSON-LD examples, via ProvPy | MIT and W3C Document Licence | n/a |
 | `constraints/` | 173 `.json` | PROV-CONSTRAINTS unification cases (see below) | MIT and W3C test suite licence | n/a |
 
 `provn/README.md` describes the PROV-N sets in full, including the known differences between the PROV-N and JSON fixtures. `provn/probes/README.md` describes the probes and the columns of `expected.tsv`.
@@ -116,7 +116,7 @@ It adds 13 probes, under the MINOR rule, for 228 in all. Every new row ends in `
 
 The `provpy` column now compares ProvPy 3.3.0 in place of 3.2.2. Of its 54 issue numbers, 5 stay and 49 go, because 3.3.0 agrees with those rows, and 12 cells gain a number.
 
-It also adds `constraints/derivation-fail5.json` and `constraints/derivation-fail6.json`, and changes the README and licence files. The two files give one identifier to two derivations without an activity, one of which names a generation or a usage, and are expected to fail unification. `LICENCES.md` takes the three-licence statement from `LICENSE.md` and adds the notice the W3C Document Licence requires for the spec examples. `LICENSE` holds the MIT text alone, so GitHub detects the repository licence as MIT.
+It also adds `constraints/derivation-fail5.json` and `constraints/derivation-fail6.json`, and changes the README and licence files. The two files give one identifier to two derivations without an activity, one of which names a generation or a usage, and are expected to fail unification. `LICENCES.md` takes the three-licence statement from `LICENSE.md` and adds the notice the W3C Document Licence requires for the spec examples and for `jsonld/submission-example-3.jsonld`, which earlier text placed under MIT. `LICENSE` holds the MIT text alone, so GitHub detects the repository licence as MIT.
 
 ### v2.2.0
 
@@ -137,4 +137,4 @@ v2.0.0 regenerates eight files in `provn/spec/` in place, under the MAJOR rule. 
 
 ## Licences
 
-See `LICENCES.md`. The spec examples in `provn/spec/` carry W3C material under the W3C Document Licence, and `LICENCES.md` gives the notice that licence requires.
+See `LICENCES.md`. The spec examples in `provn/spec/` and `jsonld/submission-example-3.jsonld` carry W3C material under the W3C Document Licence, and `LICENCES.md` gives the notice that licence requires.

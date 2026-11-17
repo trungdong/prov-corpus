@@ -1,10 +1,10 @@
 # PROV-N conformance corpus
 
-Fixtures for `test_provn_corpus.py`. Five sets:
+PROV-N fixtures in five sets. `EXCLUDED_SPEC_EXAMPLES`, `EXCLUDED_PROVTOOLBOX_DOCUMENTS` and `KNOWN_DIFFERENCES` are the names of the lists below in ProvPy's `test_provn_corpus.py`.
 
 | Directory | Source | Licence | Profile |
 |---|---|---|---|
-| `spec/prov-n/` | Examples in the [PROV-N Recommendation](https://www.w3.org/TR/2013/REC-prov-n-20130430/), extracted by `extract_spec_examples.py`; fragments are wrapped in a document declaring a default namespace and the prefixes they use | W3C Document Licence | strict |
+| `spec/prov-n/` | Examples in the [PROV-N Recommendation](https://www.w3.org/TR/2013/REC-prov-n-20130430/), extracted by `tools/extract_spec_examples.py`; fragments are wrapped in a document declaring a default namespace and the prefixes they use | W3C Document Licence | strict |
 | `spec/prov-dm/` | Examples in the [PROV-DM Recommendation](https://www.w3.org/TR/2013/REC-prov-dm-20130430/), same treatment | W3C Document Licence | strict |
 | `provtoolbox/` | `modules-core/prov-n/src/test/resources/prov/*.provn` from [ProvToolbox](https://github.com/lucmoreau/ProvToolbox) | MIT | default |
 | `provtoolbox-corpus/` | PROV-N that ProvToolbox's writer produced from the shared test corpus (`modules-legacy/prov-n` test output); each file has a PROV-JSON fixture of the same name in `../json/` | MIT | default |

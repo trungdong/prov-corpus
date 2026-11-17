@@ -1,3 +1,7 @@
+> **prov-corpus note.** The text below is ProvPy's README for these fixtures.
+> The test names, the file paths and the pre-commit configuration it cites
+> describe the ProvPy source, not this repository.
+
 # Vendored PROV-JSONLD interop fixtures
 
 These files are vendored, third-party PROV-JSONLD documents used by the
@@ -43,9 +47,9 @@ the trailing-whitespace/EOF-newline hooks, the same as the `json`/`xml`/
 ## Licence
 
 `submission-example-3.jsonld` is redistributed here as permitted under the
-**W3C Software and Document Licence**
-(<https://www.w3.org/copyright/software-license-2023/>); it is copyright ©
-World Wide Web Consortium (MIT, ERCIM, Keio, Beihang) and included unmodified
+**W3C Document Licence**
+(<https://www.w3.org/copyright/document-license/>); it is copyright ©
+2016-2024 World Wide Web Consortium and included unmodified
 for the sole purpose of interop testing in this project's test suite.
 
 `provtoolbox-mini-primer.jsonld` is redistributed from ProvToolbox

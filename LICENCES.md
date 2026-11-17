@@ -4,7 +4,7 @@ This repository combines material under three licences.
 
 ## W3C Document Licence
 
-Applies to `provn/spec/**`, which holds examples extracted from the W3C PROV-N and PROV-DM Recommendations.
+Applies to `provn/spec/**`, which holds examples extracted from the W3C PROV-N and PROV-DM Recommendations, and to `jsonld/submission-example-3.jsonld`, an example copied from the W3C PROV-JSONLD Member Submission.
 
 Copyright (c) 2013 World Wide Web Consortium (MIT, ERCIM, Keio, Beihang). All Rights Reserved.
 
@@ -18,6 +18,10 @@ This notice covers the files in `provn/spec/prov-dm/`:
 
 > Copyright © 2011-2013 W3C® (MIT, ERCIM, Keio, Beihang). This software or document includes material copied from or derived from PROV-DM: The PROV Data Model, W3C Recommendation 30 April 2013, <https://www.w3.org/TR/2013/REC-prov-dm-20130430/>.
 
+This notice covers `jsonld/submission-example-3.jsonld`:
+
+> Copyright © 2016-2024 World Wide Web Consortium. This software or document includes material copied from or derived from The PROV-JSONLD Serialization, W3C Member Submission 25 August 2024, <https://www.w3.org/submissions/2024/SUBM-prov-jsonld-20240825/>.
+
 ## W3C test suite licence
 
 Applies to the `type-*` cases in `constraints/`, which come from the W3C Provenance Working Group test suite.
@@ -28,7 +32,7 @@ Terms: <https://www.w3.org/copyright/test-suites-licenses/>
 
 ## MIT Licence
 
-Applies to everything else, including the ProvToolbox-derived files in `provn/provtoolbox/`, `provn/provtoolbox-corpus/` and `constraints/`, and the files in `json/` and `jsonld/`.
+Applies to everything else, including the ProvToolbox-derived files in `provn/provtoolbox/`, `provn/provtoolbox-corpus/` and `constraints/`, the files in `json/`, and `jsonld/provtoolbox-mini-primer.jsonld`.
 
 The file `LICENSE` holds the same MIT text and copyright lines.
 
