@@ -1,0 +1,4 @@
+document
+prefix z <http://e/\U000000E9>
+entity(z:e)
+endDocument

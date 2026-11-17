@@ -1,6 +1,6 @@
 # PROV-N probes
 
-215 short PROV-N texts, one per file, each isolating one production or rule of the [PROV-N Recommendation](https://www.w3.org/TR/prov-n/). `expected.tsv` gives the result the grammar requires for each text under two profiles. A reader passes when it accepts or rejects every probe as the row says.
+228 short PROV-N texts, one per file, each isolating one production or rule of the [PROV-N Recommendation](https://www.w3.org/TR/prov-n/). `expected.tsv` gives the result the grammar requires for each text under two profiles. A reader passes when it accepts or rejects every probe as the row says.
 
 `tools/gen_probes.py` writes the `.provn` files. The files are stored byte for byte (`.gitattributes` turns off line-ending conversion), because some probes test a bare CR, CRLF, a byte-order mark, NUL or a non-breaking space.
 
@@ -9,7 +9,7 @@
 | Profile | Meaning |
 |---|---|
 | `strict` | The whole grammar of the Recommendation, plus the MUST statements in its prose. |
-| `default` | `strict` plus these extensions, which PROV-N writers in the wild produce: bare `mentionOf`, `-` in a required argument of a relation (not as the identifier of an entity, activity, agent or bundle), a `default` declaration after a `prefix`, expressions after bundles, an identifier on `mentionOf`, an identifier or attributes on `alternateOf`, `specializationOf` and `hadMember`, and `prefix prov` or `prefix xsd` bound to their own IRIs. |
+| `default` | `strict` plus these extensions, which PROV-N writers in the wild produce: bare `mentionOf`, `-` in a required argument of a relation (not as the identifier of an entity, activity, agent or bundle, nor as either party of `hadMember`, `alternateOf` or `specializationOf`, nor as either entity of `mentionOf`), a `default` declaration after a `prefix`, expressions after bundles, an identifier on `mentionOf`, an identifier or attributes on `alternateOf`, `specializationOf` and `hadMember`, and `prefix prov` or `prefix xsd` bound to their own IRIs. |
 
 Everything else is the same under both profiles.
 
@@ -36,7 +36,11 @@ A few rows are decided by a choice of the reference implementation, provkit, whe
 - a `\u` escape that names a surrogate, which section 6 does not exclude and a Unicode string cannot hold;
 - a bare name when no `default` declaration exists, which section 3.7.1 leaves without a namespace;
 - a leading byte-order mark, since section 6 requires UTF-8 and says nothing about a byte-order mark;
-- names inside an extensibility expression, which the reference ignores whole as section 5 allows, so an undeclared prefix or a bare name with no default namespace is accepted there. These rows accept text that section 3.7.1 would reject.
+- names inside an extensibility expression, which the reference ignores whole as section 5 allows, so an undeclared prefix or a bare name with no default namespace is accepted there. These rows accept text that section 3.7.1 would reject;
+- an empty namespace IRI in a `prefix` or `default` declaration, which `IRI_REF` admits. These rows reject. An empty namespace IRI comes from an unfilled value, and ProvPy has refused one in its model since 2.0.1 ([prov issue #142](https://github.com/trungdong/prov/issues/142)), so a document that holds one cannot be exchanged with it;
+- a `\U` escape for a code point below U+10000, in a string or an IRI. Section 6, the media-type registration, gives `\UXXXXXXXX` "for U+10000 onwards", and the grammar has no production for the escape. These rows accept;
+- `-` as either party of `hadMember`, `alternateOf` or `specializationOf`, or as either entity of bare `mentionOf`. These rows reject under both profiles. Productions [24] to [26] decide `strict`, and bare `mentionOf` is no keyword there, so the `decision` covers `default` only, where these positions are the one exception to `-` in a required argument of a relation;
+- `-` as either entity of `prov:mentionOf`, which production [49] admits as an extensibility expression. These rows reject under both profiles. `-` as its bundle rejects under `strict` and accepts under `default`, as bare `mentionOf` without a bundle does.
 
 A reader that differs from the reference on these rows still follows the grammar's productions.
 

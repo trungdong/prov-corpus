@@ -2,6 +2,8 @@ name	strict	default	rule	provpy
 activity_markers	accept	accept	[7]	
 activity_one_time	reject	reject	[7]	
 after_end	reject	reject	[1]	
+alt_marker_first	reject	reject	[24] decision	
+alt_marker_second	reject	reject	[24] decision	
 alt_with_attrs	reject	accept	[24]	519
 association_1	accept	accept	[20]	
 at_after_integer	reject	reject	[40]	
@@ -72,8 +74,8 @@ element_trailing_comma	reject	reject	[3]
 empty_attrs	accept	accept	[5]	
 empty_document	accept	accept	[1]	
 empty_input	reject	reject	[1]	
-empty_iri_default	accept	accept	[47] IRI_REF	512
-empty_iri_prefix	accept	accept	[48] IRI_REF	512
+empty_iri_default	reject	reject	[47] IRI_REF decision	
+empty_iri_prefix	reject	reject	[48] IRI_REF decision	
 empty_local	accept	accept	[52]	
 esc_at	reject	reject	[55] PN_CHARS_ESC	
 esc_hash	reject	reject	[55] PN_CHARS_ESC	
@@ -121,6 +123,7 @@ int_literal	accept	accept	[60] INT_LITERAL
 int_negative	accept	accept	[60] INT_LITERAL	
 iri_u_escape	accept	accept	6, IRI_REF	521
 iri_u_escape_forbidden	reject	reject	6, IRI_REF	
+iri_upper_u_escape_bmp	accept	accept	6, IRI_REF decision	
 iri_with_nbsp	accept	accept	IRI_REF	
 iri_with_space	reject	reject	IRI_REF	
 keyword_as_id	accept	accept	[38]	
@@ -135,11 +138,18 @@ langtag_trailing_dash	reject	reject	[43] LANGTAG
 line_comment_eof	accept	accept	2.6	
 long_string	accept	accept	[58] STRING_LITERAL	
 long_string_four_quotes	reject	reject	[58] STRING_LITERAL	
+member_marker_first	reject	reject	[26] decision	
+member_marker_second	reject	reject	[26] decision	
 member_with_attrs	reject	accept	[26]	519
 member_with_id	reject	accept	[26]	519
 mention_bare	reject	accept	[2], 5	
 mention_marker	reject	accept	[2], 5	
+mention_marker_first	reject	reject	[2], 5 decision	
+mention_marker_second	reject	reject	[2], 5 decision	
 mention_prov	accept	accept	[49]	
+mention_prov_marker	reject	accept	[49] decision	
+mention_prov_marker_first	reject	reject	[49] decision	
+mention_prov_marker_second	reject	reject	[49] decision	
 missing_end	reject	reject	[1]	
 missing_rparen	reject	reject	[3]	
 name_in_time_position	reject	reject	[12]	
@@ -168,6 +178,8 @@ qname_literal_unresolvable	reject	reject	[61], 3.7.1	516
 qname_literal_unterminated	reject	reject	[61] QUALIFIED_NAME_LITERAL	
 same_record_twice	accept	accept	[2]	
 second_default	reject	reject	[45]	508
+spec_marker_first	reject	reject	[25] decision	
+spec_marker_second	reject	reject	[25] decision	
 spec_with_id	reject	accept	[25]	519
 start_3	reject	reject	[14]	
 start_4	accept	accept	[14]	
@@ -182,6 +194,7 @@ string_u_escape_short	reject	reject	6
 string_u_escape_surrogate	reject	reject	6 decision	
 string_unicode_escape	accept	accept	6	521
 string_upper_u_escape	accept	accept	6	521
+string_upper_u_escape_bmp	accept	accept	6 decision	
 trailing_dot	reject	reject	[53] PN_LOCAL	
 two_attr_blocks	reject	reject	[4]	
 typed_anyuri	accept	accept	[41]	
