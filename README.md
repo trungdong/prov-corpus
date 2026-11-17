@@ -104,9 +104,19 @@ Tags follow `vMAJOR.MINOR.PATCH`.
 - MINOR: files are added.
 - PATCH: README changes.
 
-### Unreleased
+### v3.0.0
 
-The next tag adds `constraints/derivation-fail5.json` and `constraints/derivation-fail6.json`, under the MINOR rule, and changes the README and licence files. The two files give one identifier to two derivations without an activity, one of which names a generation or a usage, and are expected to fail unification. `LICENCES.md` takes the three-licence statement from `LICENSE.md` and adds the notice the W3C Document Licence requires for the spec examples. `LICENSE` holds the MIT text alone, so GitHub detects the repository licence as MIT.
+v3.0.0 changes two rows of `provn/probes/expected.tsv`, under the MAJOR rule. `empty_iri_default` and `empty_iri_prefix` now reject under both profiles, and their `rule` ends in `decision`. The grammar's `IRI_REF` admits `<>`, but an empty namespace IRI comes from an unfilled value, and ProvPy has refused one in its model since 2.0.1 ([prov issue #142](https://github.com/trungdong/prov/issues/142)), so a document that holds one cannot be exchanged with it. No probe text changes.
+
+It adds 13 probes, under the MINOR rule, for 228 in all. Every new row ends in `decision`.
+
+- `string_upper_u_escape_bmp` and `iri_upper_u_escape_bmp` give a `\U` escape below U+10000, in a string and in an IRI. Both accept.
+- `member_marker_first`, `member_marker_second`, `alt_marker_first`, `alt_marker_second`, `spec_marker_first`, `spec_marker_second`, `mention_marker_first` and `mention_marker_second` give `-` for a party of `hadMember`, `alternateOf`, `specializationOf` or bare `mentionOf`. All reject under both profiles, and the `default` profile no longer extends `-` to these positions.
+- `mention_prov_marker_first` and `mention_prov_marker_second` give `-` for an entity of `prov:mentionOf`, and reject under both profiles. `mention_prov_marker` gives `-` for its bundle, and rejects under `strict` and accepts under `default`.
+
+The `provpy` column now compares ProvPy 3.3.0 in place of 3.2.2. Of its 54 issue numbers, 5 stay and 49 go, because 3.3.0 agrees with those rows, and 12 cells gain a number.
+
+It also adds `constraints/derivation-fail5.json` and `constraints/derivation-fail6.json`, and changes the README and licence files. The two files give one identifier to two derivations without an activity, one of which names a generation or a usage, and are expected to fail unification. `LICENCES.md` takes the three-licence statement from `LICENSE.md` and adds the notice the W3C Document Licence requires for the spec examples. `LICENSE` holds the MIT text alone, so GitHub detects the repository licence as MIT.
 
 ### v2.2.0
 
