@@ -23,7 +23,7 @@ The file has a header row and one row per probe, sorted by name. Columns are tab
 | `strict` | `accept` or `reject`. |
 | `default` | `accept` or `reject`. |
 | `rule` | What decides the row: a production number such as `[53]`, a section such as `3.7.4`, or a terminal the grammar leaves to another specification: `IRI_REF` and `LANGTAG` are SPARQL 1.0's, `DATETIME` is `xsd:dateTime` of XSD 1.1 (section 3.7.3.2), and `WS` is SPARQL 1.0's white space (space, tab, CR, LF), which the Recommendation uses without naming it. A rule ending in `decision` marks a row the Recommendation does not decide (see below). |
-| `provpy` | The number of the [prov](https://github.com/trungdong/prov) issue that reports a difference, when ProvPy 3.2.2 accepts or rejects the probe differently from the row under at least one profile. Empty when it gives the same accept or reject result under both, and when no issue covers the difference yet. The column compares acceptance only, not the documents read. |
+| `provpy` | The number of the [prov](https://github.com/trungdong/prov) issue that reports a difference, when ProvPy 3.3.0 accepts or rejects the probe differently from the row under at least one profile. Empty when it gives the same accept or reject result under both, and when no issue covers the difference yet. The column compares acceptance only, not the documents read, so a probe that ProvPy reads while it drops a statement with a warning counts as accepted. |
 
 ## Rows marked `decision`
 
